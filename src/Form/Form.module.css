@@ -1,0 +1,66 @@
+.Form {
+    width: 390px;
+    background-color: #3e3d3d;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    position: fixed;
+    font-family: sans-serif;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.Form h1 {
+    text-align: center;
+    color: #fff;
+    background-color: #3e3d3d;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.Form input {
+    width: 100%;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 3px;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.Form button {
+    width: 100%;
+    border-radius: 3px;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 19px;
+    background-color: #bac675;
+    border: 0;
+    cursor: pointer;
+    color: #3e3d3d;   
+}
+
+.Form button:hover {
+    background-color: #a4b15c;
+    transition: 0.6s;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
