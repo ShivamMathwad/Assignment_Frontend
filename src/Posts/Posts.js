@@ -10,7 +10,7 @@ class Posts extends React.Component {
     }
 
     getAllPosts = async () => {
-        let posts = (await Axios.get('http://localhost:8080/')).data;
+        let posts = (await Axios.get('https://assignment-backend11.herokuapp.com/')).data;
         this.setState({ posts })
     }
 

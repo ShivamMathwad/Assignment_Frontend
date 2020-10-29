@@ -75,7 +75,7 @@ class Form extends Component {
                 phone: phone
             };
 
-            let response = (await axios.post('http://localhost:8080/', data)).data
+            let response = (await axios.post('https://assignment-backend11.herokuapp.com/', data)).data
 
             if (response.Result === "Fail")
                 this.setState({ validationNote: response.Error })
