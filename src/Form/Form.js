@@ -55,16 +55,20 @@ class Form extends Component {
         const dob = this.state.date;
         const email = this.state.email;
         const phone = this.state.phone;
+        let errorNote = "";
         let flag = true;
 
         if (name === null || name === "" || name.length < 2) {
             flag = false;
+            errorNote = "Name Invalid!";
         }
         if (email === null || email === "" || email.length < 11 || !email.includes('.') || !email.includes('@')) {
             flag = false;
+            errorNote = "Email Invalid!";
         }
         if (!this.validateAge(dob)) {
             flag = false;
+            errorNote = "Date-of-birth Invalid!";
         }
 
         if (flag) {
@@ -83,7 +87,7 @@ class Form extends Component {
                 this.props.history.push("/posts");
 
         } else {
-            this.setState({ validationNote: "Invalid credentials!" });
+            this.setState({ validationNote: errorNote });
         }
     }
 
@@ -98,7 +102,7 @@ class Form extends Component {
                 <input type="email" placeholder="Email" onChange={this.emailChangedHandler} value={this.state.email} />
                 <input type="number" placeholder="Phone Number" onChange={this.phoneChangedHandler} value={this.state.phone} />
                 <button onClick={this.submitForm}>Submit</button>
-                <p style={{ color: 'red', backgroundColor: '#3e3d3d' }}>{this.state.validationNote}</p>
+                <p style={{ color: 'red', backgroundColor: '#3e3d3d', fontStyle: 'bold' }}>{this.state.validationNote}</p>
             </div>
 
         );
